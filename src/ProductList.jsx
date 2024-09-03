@@ -17,11 +17,11 @@ export default function ProductList(props) {
   };
 
   useEffect(() => {
-    setTimeout(() => {
+    let sto = setTimeout(() => {
       fetchData();
     }, 1000);
     return () => {
-      clearTimeout();
+      clearTimeout(sto);
     };
   }, [productSearch]);
 
